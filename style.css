@@ -54,7 +54,7 @@
 }
 .resume {
   margin: 0 auto;
-  padding: 1.25cm;
+  padding: 0.75cm 1.25cm 1.25cm 1.25cm;
   box-sizing: border-box;
   background: #fff;
   max-height: 29.7cm;
