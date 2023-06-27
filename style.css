@@ -12,6 +12,20 @@
        url('./fonts/open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/open-sans-v17-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('./fonts/open-sans-v17-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/open-sans-v17-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/open-sans-v17-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/open-sans-v17-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/open-sans-v17-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
 /* open-sans-700 - latin */
 @font-face {
   font-family: 'Open Sans';
@@ -54,7 +68,7 @@
 }
 .resume {
   margin: 0 auto;
-  padding: 0.5cm 1.0cm 1.0cm 1.0cm;
+  padding: 0.75cm 1.0cm 1.0cm 1.0cm;
   box-sizing: border-box;
   background: #fff;
   max-height: 29.7cm;
@@ -69,7 +83,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 p {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
 a {
   color: #000;
@@ -82,16 +96,16 @@ a:hover {
 }
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 h1, h2, h3, h4 {
   margin: 0;
 }
 h1 {
   font-size: 35px;
+  font-weight: 600;
   line-height: 35px;
-  margin-bottom: 5px;
   text-transform: uppercase;
 }
 dl, dt, dd {
@@ -99,9 +113,20 @@ dl, dt, dd {
   margin: 0;
 }
 dl {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   width: 55%;
+  padding: 0px 0 0 20px;
+  grid-template-columns: max-content auto;
+  /* align-self: center; */
+}
+dt {
+  grid-column-start: 1;
+  padding-right: 10px;
+}
+dd {
+  grid-column-start: 2;
 }
 dt:after {
   content: ":";
@@ -110,12 +135,15 @@ h2 {
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 h3 {
   font-size: 13px;
   display: flex;
   justify-content: space-between;
+}
+h3 > span {
+  font-weight: 600;
 }
 h3 > a > span {
   font-style: italic;
@@ -132,7 +160,7 @@ ul {
   list-style: "–   " outside;
   padding-left: 26px;
   margin-top: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 li > ul {
   margin: 0;
@@ -140,5 +168,6 @@ li > ul {
   list-style: "–   " outside;
 }
 .right {
+  font-weight: 600;
   float: right;
 }
