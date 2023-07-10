@@ -159,6 +159,9 @@ h4 > strong {
 h4 span:before {
   content: " · ";
 }
+.experience > p {
+  margin: 0 0 0 0px;
+}
 ul {
   list-style: "–   " outside;
   padding-left: 26px;
