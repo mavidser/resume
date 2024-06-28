@@ -75,7 +75,7 @@
   }
 
   h1 {
-    margin-top: -0em;
+    margin-top: -0rem;
   }
 }
 
@@ -101,8 +101,8 @@ header {
 }
 
 h1.name {
-  font-size: 3em;
-  margin-bottom: 0.3em;
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
 }
 
 h3 > span {
@@ -122,7 +122,8 @@ ul.contact {
   list-style-type: none;
   display: flex;
   gap: 20px;
-  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 section {
@@ -131,27 +132,27 @@ section {
 }
 
 section > :first-child {
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 .sidenote {
   /* height: fit-content; */
   /* width: 100%; */
-  font-size: 0.9em;
-  line-height: 1.5em;
+  font-size: 0.9rem;
+  line-height: 1.35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-left: 2px solid #000;
-  padding-left: 1em;
-  /* margin-left: 1em; */
+  padding-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
 hr {
   border: none;
   padding: 0;
   margin: 0;
-  height: 0.9em;
+  height: 0.9rem;
 }
 ul {
   list-style: "–  " outside;
