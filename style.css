@@ -78,7 +78,7 @@
 }
 
 @page {
-  size: 21cm 54cm;
+  size: 21cm 58cm;
   margin: 0;
   padding: 0;
   /* margin: 0.75cm 1.0cm 1.0cm 1.0cm; */
@@ -167,6 +167,13 @@ ul.contact {
 section {
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+
+section > footer {
+  margin-top: 0.5rem;
+}
+section > footer {
+  /* font-weight: 600; */
 }
 
 section.full-width {
