@@ -78,10 +78,8 @@
 }
 
 @page {
-  size: 21cm 58cm;
-  margin: 0;
-  padding: 0;
-  /* margin: 0.75cm 1.0cm 1.0cm 1.0cm; */
+  size: A4;
+  margin: 1cm 1cm 1cm 1cm;
 }
 
 @media print {
@@ -91,11 +89,20 @@
 
   .resume {
     margin: 0;
-    padding: 1cm 1cm 0cm 1cm;
+    padding: 0;
+    max-width: none;
   }
 
   h1 {
     margin-top: 0rem;
+  }
+
+  article {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
   }
 }
 
@@ -107,6 +114,8 @@ body {
   font-size: 13px;
   line-height: 20px;
   -webkit-text-size-adjust: 100%;
+  /* Ligature glyphs extract as garbage from the PDF, breaking ATS parsing */
+  font-variant-ligatures: none;
 }
 
 .resume {
@@ -125,7 +134,8 @@ header {
 
 h1.name {
   font-size: 3rem;
-  margin-bottom: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
 }
 
 h3 {
@@ -133,7 +143,8 @@ h3 {
 }
 
 h3>span {
-  opacity: 50%;
+  /* Solid grey, not opacity: transparent text gets emitted out of order in the PDF, detaching dates from roles */
+  color: #808080;
 }
 
 h4 {
@@ -188,6 +199,15 @@ section> :first-child {
   margin: 0;
   margin-bottom: 0.5rem;
   text-align: center;
+}
+
+.profile>p.headline {
+  font-size: 1.15rem;
+}
+
+.profile>p.summary {
+  margin-top: 0.75rem;
+  text-align: left;
 }
 
 .sidenote {
